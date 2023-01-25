@@ -1,0 +1,15 @@
+#Inputs de la persona que usa la calculadora
+bill = float(input("¿De cuánto es tu cuenta? \n $"))
+personas = float(input("¿Cuántas personas hay en tu mesa? \n"))
+propina = float(input("¿Cuál es el porcentaje de propina que quieres dejar en tu mesa? \n %"))
+
+amount_tip = (bill / 100 ) * propina
+global_tip = round(amount_tip, 2)
+tip = "{:.2f}".format(global_tip)
+
+amount_bill = (bill + amount_tip ) / personas
+bill_per_person = round(amount_bill, 2)
+cuenta = "{:.2f}".format(bill_per_person)
+
+print(f"El total de propina de la mesa es de ${tip} pesos")
+print(f"Cada persona de tu mesa debe pagar ${cuenta} pesos")

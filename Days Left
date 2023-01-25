@@ -1,0 +1,10 @@
+age = input("What is your current age? ")
+dead = input("At what age do you want to calculate your days left :o ? ")
+
+age_i = int(age)
+dead_i = int(dead)
+days = 365*(dead_i-age_i)
+weeks = 52*(dead_i-age_i)
+months = 12*(dead_i-age_i)
+
+print(f"You have {days} days, {weeks} weeks, and {months} months left.")
